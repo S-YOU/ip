@@ -1,0 +1,8 @@
+*.c
+*.py
+*.md
+*.so
+Makefile
+build/
+dist/
+data/

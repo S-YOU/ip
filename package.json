@@ -1,0 +1,37 @@
+{
+	"name": "kuni",
+	"version": "0.1.2",
+	"description": "ip to countery code",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/S-YOU/ip.git"
+	},
+	"author": {
+		"name": "S-YOU"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"gypfile": true,
+	"keywords": [
+		"binding",
+		"native",
+		"ip",
+		"country",
+		"performance"
+	],
+	"dependencies": {
+		"bindings": "*",
+		"nan": "*"
+	},
+	"devDependencies": {
+	},
+	"files": [
+		"README.md",
+		"index.js",
+		"binding.*",
+		"data.h",
+		"sc/*"
+	]
+}
