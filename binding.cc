@@ -2,7 +2,6 @@
 #include <string.h>
 
 #include <node.h>
-#include <node_buffer.h>
 #include <nan.h>
 
 #include "sc/dict_int_chr.h" //https://github.com/S-YOU/sc
@@ -42,7 +41,7 @@ static inline const char *_lookup(unsigned int ip) {
 	return countries[0];
 }
 
-static inline const unsigned char _lookupn(unsigned int ip) {
+static inline unsigned char _lookupn(unsigned int ip) {
 	if (ip < 0x01000000 || ip >= 0xe0000000) return 0;
 
 	unsigned char range_ip = direct[ip >> 8];
@@ -170,13 +169,13 @@ NAN_MODULE_INIT(Init) {
 
 	if (DictIntChrInit(&map, 0x100000, 1)) return;
 
-	for (i = 0; i < 0xa2cc; i++) {
+	for (i = 0; i < 0x98a7; i++) {
 		direct[r1[i][0]] = r1[i][1];
 	}
-	for (i = 0; i < 0x1c4ae; i++) {
+	for (i = 0; i < 0x19817; i++) {
 		memset(direct + rx[i][0], rx[i][1], rx[i][2]);
 	}
-	for (i = 0; i < 0x82bf; i++) {
+	for (i = 0; i < 0xd042; i++) {
 		DictIntChrInsert(map, maps[i][0], maps[i][1]);
 	}
 

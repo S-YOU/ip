@@ -40,13 +40,13 @@ int main() {
 
 	if (DictIntChrInit(&map, 0x100000, 1)) goto error;
 
-	for (i = 0; i < 0xa2cc; i++) {
+	for (i = 0; i < 0x98a7; i++) {
 		direct[r1[i][0]] = r1[i][1];
 	}
-	for (i = 0; i < 0x1c4ae; i++) {
+	for (i = 0; i < 0x19817; i++) {
 		memset(direct + rx[i][0], rx[i][1], rx[i][2]);
 	}
-	for (i = 0; i < 0x82bf; i++) {
+	for (i = 0; i < 0xd042; i++) {
 		DictIntChrInsert(map, maps[i][0], maps[i][1]);
 	}
 
